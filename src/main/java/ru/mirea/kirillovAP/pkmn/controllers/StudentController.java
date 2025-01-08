@@ -34,3 +34,4 @@ public class StudentController {
         return ResponseEntity.ok(Student.fromEntity(studentService.saveStudent(student)));
     }
 }
+

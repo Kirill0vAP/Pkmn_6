@@ -10,7 +10,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<String> handleRuntimeException(RuntimeException e) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body("Случилась ошибка: " + e.getMessage());
+                .body("Error: " + e.getMessage());
     }
 }
 

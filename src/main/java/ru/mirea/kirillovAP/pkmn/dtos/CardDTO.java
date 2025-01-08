@@ -61,4 +61,3 @@ public class CardDTO {
         return builder.build();
     }
 }
-

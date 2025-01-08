@@ -17,21 +17,21 @@ public class StudentDAOImpl implements StudentDAO{
     @Override
     public StudentEntity getStudentById(UUID id) {
         return studentRepository.findStudentEntityById(id).orElseThrow(
-                () -> new RuntimeException("Student with id " + id + " not found")
+                () -> new RuntimeException("Студент с айди " + id + " не найден")
         );
     }
 
     @Override
     public List<StudentEntity> getStudentsByGroup(String group) {
         return studentRepository.findStudentEntitiesByGroup(group).orElseThrow(
-                () -> new RuntimeException("Students with group " + group + " not found")
+                () -> new RuntimeException("Студент из группы " + group + " не найден")
         );
     }
 
     @Override
     public StudentEntity getStudentByFullName(String familyName, String firstName, String surName) {
         return studentRepository.findStudentEntityByFirstNameAndFamilyNameAndSurName(firstName, familyName, surName).orElseThrow(
-                () -> new RuntimeException("Student with full name " + firstName + " " + familyName + " " + surName + " not found")
+                () -> new RuntimeException("Полное имя студента " + firstName + " " + familyName + " " + surName + " не найдено")
         );
     }
 

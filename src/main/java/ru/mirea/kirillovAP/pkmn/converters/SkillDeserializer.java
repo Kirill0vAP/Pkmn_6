@@ -17,15 +17,15 @@ public class SkillDeserializer extends JsonDeserializer<AttackSkill> {
         JsonNode skillNode = ctxt.readTree(p);
 
         AttackSkill skill = new AttackSkill();
-        skill.setName(skillNode.get("name").asText(""));
+        skill.setName(skillNode.get("Имя").asText(""));
 
-        Optional.ofNullable(skillNode.get("description"))
+        Optional.ofNullable(skillNode.get("Описание"))
                 .ifPresent(
                         jsonNode -> skill.setDescription(jsonNode.asText(""))
                 );
 
-        skill.setCost(skillNode.get("cost").asText(""));
-        skill.setDamage(skillNode.get("damage").asInt(0));
+        skill.setCost(skillNode.get("Цена").asText(""));
+        skill.setDamage(skillNode.get("Урон").asInt(0));
 
         return skill;
     }
