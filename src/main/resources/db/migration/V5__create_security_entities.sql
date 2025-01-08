@@ -26,7 +26,7 @@ INTO
   users
   (username, password, enabled)
 VALUES
-  ('admin', '{bcrypt}$2a$10$HGTok2MzVIq8hHdrdmCeN.2iCFhnpEZRhwwqzn6J8pPNg7ScrE6c.', TRUE);
+  ('admin', '$2a$10$HGTok2MzVIq8hHdrdmCeN.2iCFhnpEZRhwwqzn6J8pPNg7ScrE6c.', TRUE);
 
 --insert(authorities#authority#ROLE_ADMIN#username#admin)
 INSERT
