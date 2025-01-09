@@ -9,7 +9,7 @@ import ru.mirea.kirillovAP.pkmn.services.StudentService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/student")
+@RequestMapping("/api/v1/students")
 @RequiredArgsConstructor
 public class StudentController {
     private final StudentService studentService;

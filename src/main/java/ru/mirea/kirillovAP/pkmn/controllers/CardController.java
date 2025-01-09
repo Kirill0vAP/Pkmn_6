@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static ru.mirea.kirillovAP.pkmn.dtos.CardDTO.fromModel;
 
 @RestController
-@RequestMapping("/api/v1/card")
+@RequestMapping("/api/v1/cards")
 @RequiredArgsConstructor
 public class CardController {
 
