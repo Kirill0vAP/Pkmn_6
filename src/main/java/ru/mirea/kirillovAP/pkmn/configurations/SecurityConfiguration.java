@@ -28,11 +28,11 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(
                 customizer ->
                         customizer
-                                .requestMatchers(HttpMethod.GET, "/api/v1/cards").permitAll()
-                                .requestMatchers("/api/v1/cards/{name}").permitAll()
-                                .requestMatchers("/api/v1/cards/owner").permitAll()
-                                .requestMatchers( HttpMethod.POST, "/api/v1/cards").hasRole("ADMIN")
-                                .requestMatchers( HttpMethod.POST, "/api/v1/students").hasRole("ADMIN")
+                                .requestMatchers(HttpMethod.GET, "/api/v1/card").permitAll()
+                                .requestMatchers("/api/v1/card/{name}").permitAll()
+                                .requestMatchers("/api/v1/card/owner").permitAll()
+                                .requestMatchers( HttpMethod.POST, "/api/v1/card").hasRole("ADMIN")
+                                .requestMatchers( HttpMethod.POST, "/api/v1/student").hasRole("ADMIN")
                                 .requestMatchers("/login", "/css/**", "/js/**").permitAll()
                                 .requestMatchers("/registration").permitAll()
                                 .anyRequest().authenticated()

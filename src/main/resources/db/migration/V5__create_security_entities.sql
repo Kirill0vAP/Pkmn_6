@@ -42,7 +42,7 @@ INTO
   users
   (username, password, enabled)
 VALUES
-  ('pkmn_user_app', '{bcrypt}$2a$10$Uk2GTKoNpjG5nfCi1lPyTuoFZRUdGY5RqhBmMi27dZ.Pss8V4tTxy', TRUE);
+  ('pkmn_user_app', '$2a$10$Uk2GTKoNpjG5nfCi1lPyTuoFZRUdGY5RqhBmMi27dZ.Pss8V4tTxy', TRUE);
 
 --insert(authorities#authority#ROLE_USER#username#pkmn_user_app)
 INSERT
