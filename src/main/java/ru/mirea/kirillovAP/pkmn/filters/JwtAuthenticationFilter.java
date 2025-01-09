@@ -23,7 +23,6 @@ import java.util.HashMap;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
-    private final UserDetailsService jdbcUserDetailsManager;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

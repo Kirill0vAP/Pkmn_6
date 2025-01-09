@@ -41,7 +41,7 @@ public class SecurityConfiguration {
         http.formLogin(form -> form.successForwardUrl("/success"));
 
         http.csrf(AbstractHttpConfigurer::disable);
-        http.addFilterBefore(new JwtAuthenticationFilter(jwtService, jdbcUserDetailsManager),
+        http.addFilterBefore(new JwtAuthenticationFilter(jwtService),
                 UsernamePasswordAuthenticationFilter.class);
         http.userDetailsService(jdbcUserDetailsManager);
         return http.build();
